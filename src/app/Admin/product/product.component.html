@@ -1,0 +1,40 @@
+<H2 class="head">Add Book</H2>
+<form #bookForm="ngForm" (ngSubmit)="addBook(bookForm.value)" class="container">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" ngModel class="form-control" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" ngModel class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"ngModel class="form-control"></textarea>
+    </div>
+  
+    <div class="form-group">
+      <label for="imageUrl">Image URL:</label>
+      <input type="text" id="imageUrl" name="imageUrl" ngModel class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" ngModel class="form-control">
+    </div>
+  
+    <div class="form-group">
+      <label for="totalStockOfBooks">Total Stock:</label>
+      <input type="number" id="totalStockOfBooks" name="totalStockOfBooks" ngModel class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="CategoryName">Category Name:</label>
+        <input type="text" id="categoryName" name="categoryName" [(ngModel)]="categoryName" class="form-control">
+      </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  

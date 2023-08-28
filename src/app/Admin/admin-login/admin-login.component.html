@@ -1,0 +1,33 @@
+
+<!-- 
+	Login element -->
+    <div class="loginContainer"  >
+
+        <h2>Admin Log In</h2>
+        <form #login = "ngForm" (ngSubmit)="adminLoginComponent(login.value)"  >
+        <!---Email ID---->
+        <div class="box">
+            <label for="email" class="fl fontLabel"> Email ID: </label>
+                  <div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                  <div class="fr">
+                          <input type="email" required name="email" placeholder="Email Id" class="textBox" ngModel >
+                  </div>
+                  <div class="clr"></div>
+              </div>
+              <!--Email ID----->
+  
+  
+              <!---Password------>
+              <div class="box">
+            <label for="password" class="fl fontLabel"> Password </label>
+                  <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+                  <div class="fr">
+                          <input type="Password" required name="password" placeholder="Password" class="textBox" ngModel>
+                  </div>
+                  <div class="clr"></div>
+              </div>
+              <!---Submit Button------>
+              <div class="box" style="background: #2d3e3f">
+                <input   type="Submit" name="Submit" class="submit" value="SUBMIT" >
+        </div>
+        <!---Submit Button----->

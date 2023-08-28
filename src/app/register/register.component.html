@@ -1,0 +1,137 @@
+
+<section class="registrationSection" >
+    <!-- Body of Form starts -->
+  	<div class="container">
+
+		<H2>Register Here</H2>
+      <form method="post" autocomplete="on" #ngForm ="ngForm" (ngSubmit)="registerForm(ngForm.value)">
+        <!--First name-->
+    		<div class="box">
+          <label for="UserName" class="fl fontLabel"> UserName: </label>
+    			<div class="new iconBox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+    			<div class="fr">
+    					<input type="text" name="username" placeholder="Username"
+              class="textBox" autofocus="on" required ngModel>
+    			</div>
+    			<div class="clr"></div>
+				<div class="text-danger">{{ validationErrors.username }}</div>
+    		</div>
+    		<!--First name-->
+
+
+     
+
+
+    		<!---Phone No.------>
+    		<!-- <div class="box">
+          <label for="phone" class="fl fontLabel"> Phone No.: </label>
+    			<div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="text" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox" ngModel>
+    			</div>
+    			<div class="clr"></div>
+    		</div> -->
+    		<!---Phone No.---->
+
+
+    		<!---Email ID---->
+    		<div class="box">
+          <label for="email" class="fl fontLabel"> Email ID: </label>
+    			<div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="email" required name="email" placeholder="Email Id" class="textBox" ngModel>
+    			</div>
+    			<div class="clr"></div>
+				<div class="text-danger">{{ validationErrors.email }}</div>
+    		</div>
+    		<!--Email ID----->
+
+
+    		<!---Password------>
+    		<div class="box">
+          <label for="password" class="fl fontLabel"> Password </label>
+    			<div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="Password" required name="password" placeholder="Password" class="textBox" ngModel>
+    			</div>
+    			<div class="clr"></div>
+				<div class="text-danger">{{ validationErrors.password }}</div>
+    		</div>
+    		<!---Password---->
+               <!--Address-->
+    		<div class="box">
+                <label for="Address" class="fl fontLabel"> Adderss </label>
+                      <div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+                      <div class="fr">
+                              <input type="text" required name="address"
+                    placeholder="Address" class="textBox"  ngModel>
+                      </div>
+                      <div class="clr"></div>
+                  </div>
+                  <!--Address-->
+
+
+
+
+
+
+    		<!---Submit Button------>
+    		<div class="box" style="background: #2d3e3f" >
+    				<input  type="Submit" name="Submit" class="submit"  value="SUBMIT">
+    		</div>
+    		<!---Submit Button----->
+      </form>
+	  <span class="login">  Already have account <a  (click)="toggleForm()">LogIn</a></span>
+	 
+	</div>
+	<!--Body of Form ends--->
+	</section>
+
+
+<!-- 
+	Login element -->
+
+
+		<div class="loginContainer"  *ngIf="!showRegistrationForm" >
+
+			<h2>Log In here!</h2>
+			<form #login = "ngForm" (ngSubmit)="loginSubmit(login.value)"  >
+			<!---Email ID---->
+    		<div class="box">
+				<label for="email" class="fl fontLabel"> Email ID: </label>
+					  <div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+					  <div class="fr">
+							  <input type="email" required name="email" placeholder="Email Id" class="textBox" ngModel >
+					  </div>
+					  <div class="clr"></div>
+				  </div>
+				  <!--Email ID----->
+	  
+	  
+				  <!---Password------>
+				  <div class="box">
+				<label for="password" class="fl fontLabel"> Password </label>
+					  <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+					  <div class="fr">
+							  <input type="Password" required name="password" placeholder="Password" class="textBox" ngModel>
+					  </div>
+					  <div class="clr"></div>
+				  </div>
+				  <!---Submit Button------>
+				  <div class="box" style="background: #2d3e3f">
+    				<input   type="Submit" name="Submit" class="submit" value="SUBMIT" >
+    		</div>
+    		<!---Submit Button----->
+			<span><a (click)="toggleForm()">SignUp</a></span>
+
+			<p>
+				<span><a (click)="Admin()">Admin LogIn</a></span>
+			</p>
+	</form>
+</div>
+
+
+			
+			

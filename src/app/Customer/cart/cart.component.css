@@ -1,0 +1,51 @@
+/* Style for the cart container */
+.cart {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .cart h2 {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  
+  /* Style for each book card within the cart */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  
+  .book-card {
+    flex: 1;
+  }
+  
+  .book-card h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .book-price, .book-description, .book-quantity {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .remove-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .remove-button:hover {
+    background-color: #c0392b;
+  }
+  

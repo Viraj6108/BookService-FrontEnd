@@ -1,0 +1,37 @@
+<H2>All Orders</H2>
+<div class="order-container">
+
+
+<div *ngFor="let order of adminOrders">
+    <div class="order-card">
+      <h2>Order Details</h2>
+    
+      <p>Order Id: {{ order.orderId }}</p>
+      <p>Order Date: {{ order.orderDate }}</p>
+      <p>Order Price: {{ order.orderPrice }}</p>
+      <p>Order Quantity: {{ order.orderQuantity }}</p>
+      <p>Order Status: {{ order.orderStatus }}</p>
+      <p>Order Address: {{ order.orderAddress }}</p>
+    
+      <h3>Books</h3>
+      <div class="book-list" *ngFor="let book of order.bookList">
+        <h3>{{ book.name }}</h3>
+        <p class="book-price">Price: {{ book.price }}</p>
+        <p class="book-description">Description: {{ book.description }}</p>
+        <p class="book-author">Author: {{ book.author }}</p>
+      </div>
+   
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

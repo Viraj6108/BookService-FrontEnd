@@ -1,0 +1,50 @@
+<div>
+    <h2>Customer Profile</h2>
+  
+    <!-- View Mode -->
+    <div *ngIf="!editMode">
+      <p>Username: {{ customer.username }}</p>
+      <p>Email: {{ customer.email }}</p>
+      <p>Address: {{ customer.address }}</p>
+      <button (click)="toggleEditMode()">Edit</button>
+      <Button (click)="Logout()">Logout</Button>
+    </div>
+  
+    <!-- Edit Mode -->
+    <form *ngIf="editMode" #ngForm="ngForm" (ngSubmit)="updateProfile(ngForm.value)">
+      <p>Username: {{ customer.username }}</p>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" [(ngModel)]="customer.email" required>
+  
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" [(ngModel)]="customer.address" required>
+  
+      <button type="submit">Save</button>
+      <button (click)="cancelEdit()">Cancel</button>
+
+      
+    </form>
+
+
+    <!-- for change password -->
+    <!-- <div class="changePassword">
+      <button (click)="toggle()">ChangePassword</button>
+    </div>
+    <div class="passwordForm" *ngIf="changePasswordClicked">
+      <form #ngForm ="ngForm" (ngSubmit)="changePassword(email, oldPassword, newPassword)">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required [(ngModel)]="email">
+
+        <label for="oldPassword">Old Password:</label>
+        <input type="text" id="email" name="oldPassword" required  [(ngModel)]="oldPassword">
+
+        <label for="newPassword">New Password</label>
+        <input type="text" id="email" name="newPassword" required [(ngModel)]="newPassword">
+
+        <Button>Save</Button>
+
+      </form>
+    </div> -->
+    <!-- for change password -->
+  </div>
+  

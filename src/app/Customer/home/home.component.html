@@ -1,0 +1,16 @@
+
+
+
+<div class="container" >
+    <div class="book-card" *ngFor="let book of books">
+        <img [src]="book.imageUrl" class="book-cover" alt="Book Cover">
+        <div class="book-content">
+            <h3 class="book-title">{{ book.name }}</h3>
+            <p class="book-description">{{ book.description }}</p>
+            <p class="book-price">Price: {{ book.price }} Rs</p>
+            <p class="book-price">Author: {{ book.author }} </p>
+            <button class="add-to-cart-btn" (click)="addToCart(book.name)">Add to Cart</button>
+        </div>
+    </div>
+</div>
+

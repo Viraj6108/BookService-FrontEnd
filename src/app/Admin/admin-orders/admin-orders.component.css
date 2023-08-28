@@ -1,0 +1,55 @@
+/* Style for the order card container */
+.order-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    width: 300px; /* Adjust the width as needed */
+  }
+  
+  .order-card h2 {
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  
+  /* Style for order details */
+  .order-date, .order-price, .order-quantity, .order-status, .order-address {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  /* Style for book list header */
+  .book-list h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  
+  /* Style for book details within the card */
+  .book-name, .book-price, .book-description, .book-author {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .cancelButton button{
+    background-color: rgb(231, 126, 126);
+    padding: 7px;
+  
+  }
+
+  /* ?////////////// */
+  /* CSS for the order card container */
+/* CSS for the order card container */
+/* CSS for the order container */
+/* CSS for the order cards container */
+.order-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow order cards to wrap to the next row */
+  gap: 20px; /* Adjust spacing between order cards */
+  justify-content: space-between; /* Distribute order cards evenly */
+}
+
+
+
+
+  

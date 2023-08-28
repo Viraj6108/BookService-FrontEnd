@@ -1,0 +1,30 @@
+
+<div class="cart">
+  <h2>Shopping Cart</h2>
+  <div *ngFor="let book of cart.bookList"  class="cart-item">
+    <div class="book-card">
+      <h3>{{ book.name }}</h3>
+      <p class="book-price">Price: {{ book.price }}</p>
+      <p class="book-description">Description: {{ book.description }}</p>
+      <p class="book-quantity">Quantity</p>
+    </div>
+    <button  class="remove-button"  (click)="removeButton(book.bookId)">Remove</button>
+  </div>
+</div>
+
+
+<div>
+  <label for="paymentMode">Select Payment Mode:</label>
+  <select id="paymentMode" name="paymentMode" [(ngModel)]="selectedPaymentMode">
+    <option value="COD">Cash on Delivery (COD)</option>
+    <option value="CARD">Credit Card (CARD)</option>
+    <option value="ONLINE">Online Payment (ONLINE)</option>
+  </select>
+</div>
+
+<p>Selected Payment Mode: {{ selectedPaymentMode }}</p>
+
+<div class="checkout">
+  <button (click)="checkout()">Checkout</button>
+</div>
+
